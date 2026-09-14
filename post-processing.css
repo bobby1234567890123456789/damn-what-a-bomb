@@ -1,0 +1,19 @@
+/* Keep compositing outside the transformed 3D case to preserve its depth. */
+body.film-mode::after{display:none}
+body.film-mode .deck{filter:none}
+.post-overlay{position:absolute;inset:0;pointer-events:none;z-index:20;overflow:hidden;border-radius:10px;display:none}
+.film-mode .post-overlay{display:block}
+.post-overlay i{position:absolute;inset:0;pointer-events:none}
+.post-vignette{background:radial-gradient(ellipse at center,transparent 38%,#020805 100%);opacity:var(--post-vignette)}
+.post-scanlines{background:repeating-linear-gradient(0deg,transparent 0 3px,#000 3px 4px);opacity:var(--post-scanlines)}
+.post-grain{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Cpath filter='url(%23n)' opacity='.6' d='M0 0h160v160H0z'/%3E%3C/svg%3E");opacity:var(--post-grain);mix-blend-mode:soft-light}
+body.film-mode .clock,body.film-mode .display,body.film-mode .morse-signal.active{text-shadow:0 0 var(--post-glow-radius) currentColor}
+.post-settings details{border:0;padding:0}.post-settings summary{color:var(--lime)}
+.post-settings p{font-size:12px;color:var(--muted);line-height:1.5}
+.post-presets{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+.post-presets button{padding:6px 8px;font-size:12px}
+.post-presets button[aria-pressed="true"]{background:#d1ed84;color:#182417;border-color:#d1ed84}
+.post-setting{display:grid;grid-template-columns:1fr auto;gap:6px;margin:14px 0;font-size:13px}
+.post-setting output{font:12px monospace;color:var(--lime)}
+.post-setting input{grid-column:1/-1;width:100%;margin:0;accent-color:#d1ed84;min-height:24px}
+.film-mode .post-paused{display:none}
