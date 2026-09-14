@@ -14,7 +14,9 @@
   document.querySelector('.sidebar').append(panel);
   const overlay = document.createElement('div'); overlay.className = 'post-overlay'; overlay.setAttribute('aria-hidden', 'true');
   overlay.innerHTML = '<i class="post-vignette"></i><i class="post-grain"></i><i class="post-scanlines"></i><i class="post-pixelate"></i><i class="post-dither"></i>';
-  document.querySelector('.bomb-station').append(overlay);
+  // Keep compositing on the playable deck. Applying it to the rotating station
+  // can flatten the 3D case and interfere with its perspective layers.
+  document.querySelector('#deck').append(overlay);
   function renderSettings() { for (const [key, enabled] of Object.entries(settings)) { document.documentElement.style.setProperty('--post-' + key, enabled ? '1' : '0'); document.body.classList.toggle('post-' + key, enabled); const button = panel.querySelector(`[data-filter="${key}"]`); button.setAttribute('aria-pressed', String(enabled)); button.textContent = filters[key] + ': ' + (enabled ? 'on' : 'off'); } }
   function save() { renderSettings(); try { localStorage.setItem('defusal-post-processing', JSON.stringify(settings)); } catch {} }
   panel.addEventListener('click', event => { const button = event.target.closest('[data-filter]'); if (!button) return; const key = button.dataset.filter; settings[key] = !settings[key]; save(); });
