@@ -1,0 +1,4 @@
+/* Override casing, hazard stripe, grates, modules and effects. */
+:root { --custom-grate: url('grate.png'); }
+.hazard { background-image: var(--custom-grate), repeating-linear-gradient(130deg,#dec66a 0 12px,#2e332e 12px 24px) !important; background-size: 96px 96px, auto !important; }
+.case-face,.bomb-box .deck { background-image: var(--texture-case), var(--custom-grate) !important; }

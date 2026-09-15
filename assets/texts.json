@@ -1,10 +1,10 @@
 {
   "en": {
-    "title": "Damn! What A Bomb",
+    "title": "Damn What A Bomb",
     "creator": "Made by HydroChloricHCL",
-    "arm": "Start mission",
+    "arm": "Arm the bomb →",
     "abort": "Abort mission",
-    "newDevice": "New mission",
+    "newDevice": "New device →",
     "timeRemaining": "TIME REMAINING",
     "musicReady": "Music: ready",
     "musicOn": "Music: on",
@@ -30,11 +30,11 @@
     "password": "PASSWORD"
   },
   "zh": {
-    "title": "哎呀我去这炸弹啥阴",
+    "title": "该死的炸弹",
     "creator": "制作：盐酸不咸也不酸",
-    "arm": "开始任务",
+    "arm": "启动炸弹 →",
     "abort": "中止任务",
-    "newDevice": "新任务",
+    "newDevice": "新设备 →",
     "timeRemaining": "剩余时间",
     "musicReady": "音乐：就绪",
     "musicOn": "音乐：开",

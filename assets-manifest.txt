@@ -1,0 +1,18 @@
+Every replaceable file in this package is in assets/:
+case-metal.png
+module-panel.png
+button-cap.png
+simon-pad.png
+sticky-note.png
+bomb-image-01.png
+bomb-image-02.png
+bomb-image-03.png
+wire-red.png
+wire-blue.png
+wire-black.png
+grate.png
+bgm1.mp3
+bgm2.mp3
+texts.json
+credits.md
+theme.css
